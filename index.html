@@ -7,207 +7,441 @@
 </head>
 <body>
     <header>
-        <div>                                                            <!-- block with discounts and a link to the store --> 
+        <div id="header-info">                                                            
             <p>
                 <span>20% OFF ON ORGANIC SOAPS | FREE SHIPPING OVER $40</span>  
-                <span><a href="#shop">TRY OUR AROMATIC SOAPS</a></span>
+                <span><a href="#shop-section">TRY OUR AROMATIC SOAPS</a></span>
             </p>
         </div>
-        <div>                                                             <!-- block with logo and navigation -->
-            <div>
-                <img src="img/logo.svg" alt="logo">
-            </div>                                                    <!-- store logo --> 
-            <div>                                                                 <!-- page navigation --> 
+        <div>                                                              
+            <div id="header-logo">
+                <a href="#about-us-section"><img src="img/logo.svg" alt="logo"></a>                               
+            </div>                                                    
+            <div id="header-navigation">                                                                 
                 <nav> 
-                    <a href="#about-us">About Us</a>
-                    <a href="#categories">Categories</a>
-                    <a href="#shop">Shop</a>
-                    <a href="#testimonials">Testimonials</a>
+                    <a href="#about-us-section">About Us</a>
+                    <a href="#categories-section">Categories</a>
+                    <a href="#shop-section">Shop</a>
+                    <a href="#testimonials-section">Testimonials</a>
                     <a href="#contact-us">Contact us</a>
                 </nav>
             </div>
-            <div>                                                                 <!-- navigation on social networks --> 
+            <div id="header-social-icons">                                                                 
                 <nav>
-                    <a href="https://www.facebook.com/" target="_blank">facebook</a>
-                    <a href="https://www.instagram.com/" target="_blank">instagram</a>
-                    <a href="https://www.youtube.com/" target="_blank">youtube</a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.png" alt="icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/inst.png" alt="icon"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="img/yout.png" alt="icon"></a>
                 </nav>
             </div> 
         </div> 
     </header>
     <main>
-        <section>                                                        <!-- store name and description -->
-            <p>Cosmetics you deserve</p>
-            <h1>Handcrafted Organic Soap.</h1>
-            <p>Making your body and thoughts clean and clear.</p>
-            <a href="#shop">Shop Now</a>
-            <a href="#about-us">About Us</a>
-        </section>
-        <div>                                                  <!-- About us -->
-            <section>                                                        <!-- block 1 -->
-                <img src="img/image-1.webp" alt="illustration">
-                <p>100% natural</p>
-                <h2>Great for Your Skin.</h2>
-                <img src="img/logo-1.svg" alt="logo">
-                <p>Our organic soaps gently take care of your skin.</p>
-                    <ul>
-                        <li>Our organic soaps gently take care of your skin.</li>
-                        <li>We combine cold-pressed olive oil, coconut oil, and cocoa butter.</li>
-                        <li>Each bar of soap contains antioxidants and vitamin E.</li>
-                    </ul>
-                <p>Our soap cleanses your skin, deeply nourishes, and moisturizes it.</p>
-                <a href="#shop">Learn more</a>
-            </section>
-            <section>                                                         <!-- block 2 -->
-                <p>Top choice</p>
-                <h2>Matcha Green Soap.</h2>
-                <img src="img/logo-1.svg" alt="logo">
-                <p>Matcha is not only a delicious tea but also our new homemade soap, which we are proud to present to you.</p>
-                <p>Matcha has a huge number of useful effects. It contains theanine and catechin. Theanine is considered to be a powerful yet gentle natural antidepressant. Catechin is a very powerful antioxidant that works to rejuvenate our body. Now you can experience all these benefits of matcha in our artisan soap.</p>
-                <div>                                                         <! -- awards pictures -->         
-                    <img src="img/01awards.svg" alt="logo">
-                    <img src="img/02awards.svg" alt="logo">
-                    <img src="img/03awards.svg" alt="logo">
-                    <img src="img/04awards.svg" alt="logo">
-                    <img src="img/05awards.svg" alt="logo">
-                </div>
-            </section>
-        </div>
-        <div>                                                    <!--Categories-->  
+        <section id="about-us-section">                                                         
+            <p class="section-header">Cosmetics you deserve</p>
+            <h1>Handcrafted Organic <span>Soap.</span></h1>
+            <p class="section-description">Making your body and thoughts clean and clear.</p>
             <div>
-                <p>Soap</p>
-                <h2>Categories.</h2>
-                <img src="img/logo-1.svg" alt="logo">
-                <p>Here you will find different types of homemade soaps.</p>
+                <a href="#shop-section" id="shop-now-button">Shop Now</a>
+                <a href="#about-us-section" id="about-us-button">About Us</a>
+            </div>
+        </section>                                       
+        <section id="description-section">                                                         
+            <img src="img/image-1.webp" alt="illustration">
+            <p class="section-header">100% natural</p>
+            <h2 class="section-title">Great for Your Skin.</h2>
+            <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+            <p class="section-description">Our organic soaps gently take care of your skin.</p>
+                <ul>
+                    <li>Our organic soaps gently take care of your skin.</li>
+                    <li>We combine cold-pressed olive oil, coconut oil, and cocoa butter.</li>
+                    <li>Each bar of soap contains antioxidants and vitamin E.</li>
+                </ul>
+            <p>Our soap cleanses your skin, deeply nourishes, and moisturizes it.</p>
+            <a href="#shop-section" id="learn-more-button">Learn more</a>
+        </section>
+        <section id="matcha-section">                                                         
+            <p class="section-header">Top choice</p>
+            <h2 class="section-title">Matcha Green Soap.</h2>
+            <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+            <p class="section-description">Matcha is not only a delicious tea but also our new homemade soap, which we are proud to present to you.</p>
+            <p>Matcha has a huge number of useful effects. It contains theanine and catechin. Theanine is considered to be a powerful yet gentle natural antidepressant. Catechin is a very powerful antioxidant that works to rejuvenate our body. Now you can experience all these benefits of matcha in our artisan soap.</p>
+            <div id="awards">                                                               
+                <img src="img/01awards.svg" alt="logo">
+                <img src="img/02awards.svg" alt="logo">
+                <img src="img/03awards.svg" alt="logo">
+                <img src="img/04awards.svg" alt="logo">
+                <img src="img/05awards.svg" alt="logo">
+            </div>
+        </section>
+        <section id="categories-section">
+            <div>
+                <p class="section-header">Soap</p>
+                <h2 class="section-title">Categories.</h2>
+                <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+                <p class="section-description">Here you will find different types of homemade soaps.</p>
                 <p>Select your skin type, the scent, or the effect you want to achieve to find your perfect fit.</p>
                 <p>All soaps</p>
-            </div>                                                                                              
-            <div>                                                <!-- Slider -->
-                <button>slide left</button>
-                <article>
-                    <img src="img/sweet-scents.webp" alt="illustration">
-                    <p>Sweet Scents</p>
-                    <p>If you have a sweet tooth, you will love our fruit, candy, and other sweet-scent soap.</p>
-                    <a href="#shop">Shop</a>
-                </article>
-                <article>
-                    <img src="img/herbal-soaps.webp" alt="illustration">
-                    <p>Herbal Soaps</p>
-                    <p>These soaps are for those who love the scent of lavander, juniper, and other herbs.</p>
-                    <a href="#shop">Shop</a>
-                </article>
-                <article>
-                    <img src="img/problem-skin.webp" alt="illustration">
-                    <p>Problem Skin</p>
-                    <p>The soap will help get rid of blackheads, as well as normalize the oil glands.</p>
-                    <a href="#shop">Shop</a>
-                </article>
-                <article>
-                    <img src="img/sensitive-skin.webp" alt="illustration">
-                    <p>Sensitive Skin</p>
-                    <p>We have special soaps for especially delicate skin that requires gentle care.</p>
-                    <a href="#shop">Shop</a>
-                </article>
-                <button>slide right</button>
             </div>
-            <div>                                               <!-- block 1-->
-                <p>10%</p>
+            <div>                                                
+                <button class="slide-left-button"></button>
+                <article>
+                    <img src="img/sweet-scents.webp" alt="illustration" class="soap-categories-images">
+                    <h2 class="soap-categories-name">Sweet Scents</h2>
+                    <p>If you have a sweet tooth, you will love our fruit, candy, and other sweet-scent soap.</p>
+                    <a href="#shop-section" class="shop-button" >Shop</a>
+                </article>
+                <article>
+                    <img src="img/herbal-soaps.webp" alt="illustration" class="soap-categories-images">
+                    <h2 class="soap-categories-name">Herbal Soaps</h2>
+                    <p>These soaps are for those who love the scent of lavander, juniper, and other herbs.</p>
+                    <a href="#shop-section" class="shop-button">Shop</a>
+                </article>
+                <article>
+                    <img src="img/problem-skin.webp" alt="illustration" class="soap-categories-images">
+                    <h2 class="soap-categories-name">Problem Skin</h2>
+                    <p>The soap will help get rid of blackheads, as well as normalize the oil glands.</p>
+                    <a href="#shop-section" class="shop-button">Shop</a>
+                </article>
+                <article>
+                    <img src="img/sensitive-skin.webp" alt="illustration" class="soap-categories-images">
+                    <h2 class="soap-categories-name">Sensitive Skin</h2>
+                    <p>We have special soaps for especially delicate skin that requires gentle care.</p>
+                    <a href="#shop-section" class="shop-button">Shop</a>
+                </article>
+                <button class="slide-right-button"></button>
+            </div>
+        </section>
+        <section id="discount-proposition-section">
+            <div id="discount-size">                                                
+                <h2>10%</h2>
                 <div></div>
                 <p>Discount on your first order.</p>
             </div>
-            <div>                                               
-                <div>                                           <!-- block 2-->
+            <div id="go-to-shop">                                               
+                <div>                                            
                 <p>Your Skin Will Thank You. </p>
                 <div></div>
                 <p>Start your skincare today.</p>
-                <a href="#shop">Shop</a>
+                <a href="#shop-section">Shop</a>
+                </div>
             </div>
-        </div>
-        <div>                                                   
-            <div>                                               <!-- block 3-->
-            <p>Why us</p>
-            <h2>Why Shop at Purity?</h2>
-            <p>Our range of handcrafted soaps is made to treat you and your skin, from morning washing-ups to evening relaxing baths.</p>
-            <p>We are sure that using soap should be a pleasant experience — we create each soap bar not only to cleanse the skin but also to improve your mood, help you relax, and enjoy your bath rituals. We produce a vast range of different soaps with elegant smells and unique characteristics. You can shop right on this website and get your soap delivered really fast.</p>
+        </section>
+        <section id="benefits-section">
             <div>
-                <img src="" alt="">
+                <p class="section-header">Why us</p>
+                <h2 class="section-title">Why Shop at Purity?</h2>
+                <p class="section-description">Our range of handcrafted soaps is made to treat you and your skin, from morning washing-ups to evening relaxing baths.</p>
+                <p>We are sure that using soap should be a pleasant experience — we create each soap bar not only to cleanse the skin but also to improve your mood, help you relax, and enjoy your bath rituals. We produce a vast range of different soaps with elegant smells and unique characteristics. You can shop right on this website and get your soap delivered really fast.</p>
+            </div>
+        <!--<div id="benefits-icons">
+                <div>
+                <img src="" alt="logo">
                 <p>Natural ingredients.</p>
             </div>
             <div>
-                <img src="" alt="">
+                <img src="" alt="logo">
                 <p>Best herbs and fruit.</p>
             </div>
             <div>
-                <img src="" alt="">
+                <img src="" alt="logo">
                 <p>120g of your delight.</p>
             </div>
-        </div>
-        <div>                                                  <!--shop-->                                      
-            <p>Shop</p>
-            <img src="img/logo-1.svg" alt="logo">
-            <p>Select the soap you like and add it to the shopping cart.</p>
+            </div>-->
+        </section>    
+        <section id="shop-section">
             <div>
-                <a href="lemon-start.html"><img src="img/lemon-start.png" alt="illustration"></a>
-                <p><a href="lemon-start.html">Lemon Start</a></p>
-                <p>$3,00</p>
-                <a href="#cart">Add to Cart</a>
+                <p class="section-header">Shop</p>
+                <h2 class="section-title">Start Your Skincare today.</h2>
+                <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+                <p class="section-description">Select the soap you like and add it to the shopping cart.</p>
             </div>
             <div>
-                <a href="fresh-touch.html"><img src="img/fresh-touch.png" alt="illustration"></a>
-                <p><a href="fresh-touch.html">Fresh Touch</a></p>
-                <p>$2,00</p>
-                <a href="#cart">Add to Cart</a>
+                <div>
+                    <a href="lemon-start.html"><img src="img/lemon-start.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="lemon-start.html" class="soap-name">Lemon Start</a></p>
+                    <p class="soap-price">$3,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="fresh-touch.html"><img src="img/fresh-touch.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="fresh-touch.html" class="soap-name">Fresh Touch</a></p>
+                    <p class="soap-price">$2,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="tender-lavander.html"><img src="img/tender-lavander.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="tender-lavander.html" class="soap-name">Tender Lavander</a></p>
+                    <p class="soap-price">$4,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="lemon-vanilla.html"><img src="img/lemon-vanilla.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="lemon-vanilla.html" class="soap-name">Lemon&Vanilla</a></p>
+                    <p class="soap-price">$3,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="matcha-tea.html"><img src="img/matcha-tea.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="matcha-tea.html" class="soap-name">Matcha Tea</a></p>
+                    <p class="soap-price">$2,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="cinnamon-delight.html"><img src="img/cinnamon-delight.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="cinnamon-delight.html" class="soap-name">Cinnamon Delight</a></p>
+                    <p class="soap-price">$4,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="caramel-dream.html"><img src="img/caramel-dream.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="caramel-dream.html" class="soap-name">Caramel Dream</a></p>
+                    <p class="soap-price">$4,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+                <div>
+                    <a href="orange-boost.html"><img src="img/orange-boost.png" alt="illustration" class="soap-image"></a>
+                    <p><a href="orange-boost.html" class="soap-name">Orange Boost</a></p>
+                    <p class="soap-price">$3,00</p>
+                    <a href="#cart" class="add-to-cart-button">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+        <section id="expert-support-section">
+            <div>                                         
+                <p class="section-header">Soap stories</p>
+                <h2 class="section-title">Your Skin Needs Proper Care.</h2>
+                <div></div>
+                <p class="section-description">Our homemade soap consists of different natural ingredients. If you are not sure which soap to buy, you can consult with us.</p>
+                <a href="#contact-us" id="expert-support-buttom">Talk to Our Soap Expert</a>
+            </div>
+        </section>  
+        <section id="bath-routine-section">
+            <p class="section-header">For your bath routine</p>
+            <h2 class="section-title">Artisanal Level of Care.</h2>
+            <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+            <p class="section-description">Bathing isn't just about cleansing your body. With our craft bars and liquid soaps, you can truly relax and clear your mind.</p>
+            <p><em>«My evening really begins when I take a long, hot bath. I light a candle, and I turn on the news and try to catch up. It's when I can breathe from the day to the night; that means a lot to me.»</em></p>
+            <p>— Vera Wang</p>
+        </section>  
+        <section id="testimonials-section">
+            <div>
+                <p class="section-header">Testimonials</p>
+                <h2 class="section-title">Our Customers' Reviews.</h2>
+                <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+                <p class="section-description">We're happy that more and more customers prefer handmade organic soaps.</p>
             </div>
             <div>
-                <a href="tender-lavander.html"><img src="img/tender-lavander.png" alt="illustration"></a>
-                <p><a href="tender-lavander.html">Tender Lavander</a></p>
-                <p>$4,00</p>
-                <a href="#cart">Add to Cart</a>
+                <button class="slide-left-button">slide left</button>
+                <article>
+                    <h2 class="client-name">Audrey Jameson</h2>
+                    <p class="client-testimonial">“Since I first tried natural soap bars, I have stopped using store-bought soaps! This soap smells very nice and the skin is like after luxury SPA treatments. I have already tried almost all types of soaps by Purity and became their fan!”</p>
+                    <p>October 28, 2019</p>
+                </article>
+                <article>
+                    <h2 class="client-name">Jasmine Gordons</h2>
+                    <p class="client-testimonial">“Purity has a huge variety of homemade soaps, both solid and liquid, from sweet to fresh fragrances. When I get tired of the smell of one soap, I just buy the next one. They only use natural ingredients and I really appreciate that!”</p>
+                    <p>March 08, 2020</p>
+                </article>
+                <article>
+                    <h2 class="client-name">Donna Smith</h2>
+                    <p class="client-testimonial">“After I have discovered Purity, my skin is always soft, tender, and hydrated, and even washing my face in the morning turns into a pleasant ritual. In addition, this soap looks great and can be bought as a gift to your friends or relatives.”</p>
+                    <p>April 13, 2021</p>
+                </article>
+                <button class="slide-right-button">slide right</button>
+            </div>
+        </section>
+        <section id="blog-section">
+            <div>
+                <p class="section-header">Our blog</p>
+                <h2 class="section-title">Soap Stories.</h2>
             </div>
             <div>
-                <a href="lemon-vanilla.html"><img src="img/lemon-vanilla.png" alt="illustration"></a>
-                <p><a href="lemon-vanilla.html">Lemon&Vanilla</a></p>
-                <p>$3,00</p>
-                <a href="#cart">Add to Cart</a>
+                <article class="blog-items">
+                    <img src="img/img-1.webp" alt="illustration">    
+                    <h2>What is Natural Soap Made of?</h2>
+                    <p>You may have heard that only natural ingredients are used for homemade soaps. Let's take a look at what soap is made of and how this process...</p>
+                    <a href="#about-us-section"></a>
+                </article>
+                <article class="blog-items">
+                    <img src="img/img-2.webp" alt="illustration">    
+                    <h2>Selecting Your Favorite Smell</h2>
+                    <p>The smell of soap can be too strong and confusing. It is worth remembering that the soap bar has a more concentrated smell than the one that...</p>
+                    <a href="#about-us-section"></a>
+                </article>
+                <article class="blog-items">
+                    <img src="img/img-3.webp" alt="illustration">    
+                    <h2>Soap for Problem Skin</h2>
+                    <p>Natural soaps are able to relieve you of problems with acne, blackheads, and excess oil. The main thing here is to select the soap properly...</p>
+                    <a href="#about-us-section"></a>
+                </article>
             </div>
+        </section>
+        <section id="questions-section">
             <div>
-                <a href="matcha-tea.html"><img src="img/matcha-tea.png" alt="illustration"></a>
-                <p><a href="matcha-tea.html">Matcha Tea</a></p>
-                <p>$2,00</p>
-                <a href="#cart">Add to Cart</a>
+                <p class="section-header">Questions</p>
+                <h2 class="section-title">Still Have Questions?</h2>
+                <img src="img/logo-1.svg" alt="logo" class="leaves-logo">
+                <p class="section-description">Read the sections below and contact us if you need a consultation or any kind of help.</p>
             </div>
-            <div>
-                <a href="cinnamon-delight.html"><img src="img/cinnamon-delight.png" alt="illustration"></a>
-                <p><a href="cinnamon-delight.html">Cinnamon Delight</a></p>
-                <p>$4,00</p>
-                <a href="#cart">Add to Cart</a>
+            <div id="questions-list">
+                <ul>
+                    <li>
+                        <div>
+                           <p>How can I make the order?</p> 
+                           <div></div>
+                           <p>Simply add the soap you like to the shopping cart and specify your shipping address. We provide free delivery for orders over $40.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                           <p>Do you have an offline store?</p> 
+                           <div></div>
+                           <p>Yes, we have a small soap shop in New York where you can try and smell all our soaps.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                           <p>Do you ship worldwide?</p> 
+                           <div></div>
+                           <p>Due to Covid-19 restrictions, we ship only across the USA for now, but we're planning to ship to Europe again in the near future.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                           <p>How can I change my order?</p> 
+                           <div></div>
+                           <p>We are really fast at shipping your orders, so if you want to change anything or cancel the order, call us as soon as possible. We'll try our best to make the changes.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div>
-                <a href="caramel-dream.html"><img src="img/caramel-dream.png" alt="illustration"></a>
-                <p><a href="caramel-dream.html">Caramel Dream</a></p>
-                <p>$4,00</p>
-                <a href="#cart">Add to Cart</a>
-            </div>
-            <div>
-                <a href="orange-boost.html"><img src="img/orange-boost.png" alt="illustration"></a>
-                <p><a href="orange-boost.html">Orange Boost</a></p>
-                <p>$3,00</p>
-                <a href="#cart">Add to Cart</a>
-            </div>
-        </div>
+             <img src="img/image-2.webp" alt="illustration">
+        </section>
     </main>
     <footer>
-
+        <div id="footer">                                              
+            <div>
+                <article class="endpoints">
+                    <img src="img/icon-1.svg" alt="logo">
+                    <h2>100% organic</h2>
+                    <p>Our products contain only natural ingredients. We don't use parabens and flavorings.</p>
+                </article>
+                <article class="endpoints">
+                    <img src="img/icon-2.svg" alt="logo">
+                    <h2>Natural herbs</h2>
+                    <p>Our soap is based on natural herbs like lavender, verbena, chamomile, and others.</p>
+                </article>
+                <article class="endpoints">
+                    <img src="img/icon-3.svg" alt="logo">
+                    <h2>Antioxidants</h2>
+                    <p>Made from natural ingredients, this soap contains natural antioxidants that bring you peace of mind.</p>
+                </article>
+                <article class="endpoints">
+                    <img src="img/icon-4.svg" alt="logo">
+                    <h2>Deep hydration</h2>
+                    <p>Our products contain only natural ingredients. We don't use parabens and flavorings.</p>
+                </article>
+            </div>
+            <div id="final-info">
+                <a href="#about-us-section"><img src="img/logo.svg" alt="logo"></a>  
+                <p>We produce handmade soap from cold-pressed olive oil, coconut oil, and cocoa butter. Each of our soap bars is an extensive source of vitamin E and antioxidants. Turn your routine washing-up into a pleasant ritual.</p> 
+            </div>    
+            <div id="final-social-navigation">                                                                  
+                <nav>                                                            
+                    <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.png" alt="icon"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/inst.png" alt="icon"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="img/yout.png" alt="icon"></a>
+                </nav>
+            </div> 
+            <div id="final-page-navigation">                                                                  
+                <nav> 
+                    <a href="#about-us-section">About Us</a>
+                    <a href="#categories-section">Categories</a>
+                    <a href="#shop-section">Shop</a>
+                    <a href="#testimonials-section">Testimonials</a>
+                    <a href="#contact-us">Contact us</a>
+                </nav>
+            </div>
+            <div id="contact-us">
+                <p>Contacts.</p>
+                <p>
+                    <span>E-mail</span>
+                    <span>purity@email.com</span>
+                </p>
+                <p>
+                    <span>Phone</span>
+                    <span>+1 (234) 567 89 00</span>
+                </p>
+                <p>
+                    <span>Adress</span>
+                    <span>889 Lexington Ave, New York</span>
+                </p>
+            </div>
+            <div id="subscription">
+                <p>Subscribe to receive our special offers.</p>
+                <div>
+                    <form>
+                        <input type="text" placeholder="Email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </footer>
-    <div>                                                                 <!-- cart -->
-        <div>                                                                 <!-- shopping cart logo -->
-            <div>shopping cart logo</div>                                 
-            <div>goods counter</div>
-        </div>                                                                                                                    
-        <div>                                                                 <!-- modal cart window -->
+    <div id="cart">
+        <div id="cart-icon">                                                                 
+            <div id="shopping-cart-logo">shopping cart logo</div>                                 
+            <div id="goods-counter">goods counter</div>
+        </div>  
+        <div id="cart-header">                                                                  
             <p>Shopping cart</p>
-            <button type="button" class="btn-close" aria-label="Close">X</button>
+            <button>close icon</button>
         </div> 
+        <div id="order-content">
+            <p>PRODUCTS</p>
+            <div id="cart-item">
+                <img src="img/lemon-start.png" alt="illustration">
+                <p>Lemon Start</p>
+                <div id="input-cart-items">
+                    <input type="number">
+                    <button>add</button>
+                    <button>subtract</button>
+                </div>
+                <p>$3,00</p>
+                <button>cart icon</button>
+            </div>
+           <div id="total-items">
+                <p>Total</p>
+            </div>
+        </div>
+        <div id="order-form"> 
+            <p>PLACE AN ORDER</p>
+            <form>
+                <div>
+                    <span>Name</span>
+                    <span>*</span>
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div>
+                    <span>Email</span>
+                    <span>*</span>
+                    <input type="text" placeholder="Your email address">
+                </div>
+                <div>
+                    <span>Phone</span>
+                    <span>*</span>
+                    <input type="text" placeholder="Your phone">
+                </div>
+                <div>
+                    <span>Comment</span>  
+                    <input type="text" placeholder="Your comment">
+                </div>
+            </form>
+        </div>
+        <div id="end-order">
+             <span>Continue shopping</span>
+            <button>Order</button>
+        </div>
     </div>
 </body>
 </html>
