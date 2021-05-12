@@ -1,53 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;500;600;700&family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lexend:wght@100;500;600;700&family=Niconne&display=swap');
+
+:root {
+   --salmon-color: #ebbaa9;
+   --black-color: #333;
+    --main-font: Lato,sans-serif;
+    --cursive-font: 'Niconne', cursive;
+  }
 
 *{
     margin: 0;
 }
 
-:root {
-   --salmon-color: #ebbaa9;
-    --main-font: Lato,sans-serif;
-    --cursive-font: font-family: 'Niconne', cursive;
-  }
-
-  #header-logo img{
-    display: block;
-    width: 146px;
-    
-  }
-
-#header-info{
-    background-color:#ecd9d1;
-    width: 100%;
-    color: rgb(147,111,98);
-    font-family: var(--main-font);
-}
-
-.burger-icon {
-    display: none;
-}
-
-@media (max-width: 991px) {
-    #header-info {
-        display: none;
-    }
-    
-    .burger-icon {
-        display: block;
-    }
-
-    #main-navigation {
-        display: none;
-    }  
-}
-    #burger-checkbox {
-        display: none;
-    }
-
-
-
-#burger-checkbox:checked ~ #main-navigation {
-    display: block;
+body{
+    max-width: 980px;
+    margin: auto;
 }
 
 header{
@@ -55,8 +23,20 @@ header{
     background-size: cover;
 }
 
+.wrapper{
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#header-info{
+    background-color:#ecd9d1;
+    width: 100%;
+    color: rgb(147,111,98);
+    font-family: var(--main-font);
+    display: none;
+}
+
 #header-paragraph{
-    padding: 35px;
     display: flex;
     justify-content: space-between;
 }
@@ -69,10 +49,27 @@ header{
 
 #header-main-menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+#header-logo img {
+    display: block;
+    width: 146px;
+}
+
+#burger-checkbox {
+    display: none;
+}
+
+#burger-checkbox:checked ~ #main-navigation {
+    display: block;
+}
+
+#main-navigation {
+    display: none;
 }
 
 #header-navigation {
@@ -87,65 +84,97 @@ header{
     font-family: var(--main-font);
     text-decoration-line: none;
 }
-    
+
 #header-social-icons img{
     color: rgb(147,111,98);
     width: 30px;
     height: 30px;
 }
 
-/* #description-section{
-    margin-top: 200px;
-    max-width: 600px;
-    margin-left: 200px;
-} */
+@media (min-width: 991px) {
+    
+    .burger-icon {
+        display: none;
+    }
 
-.section-header{
+    #header-info {
+        display: block;
+    }
+
+    #main-navigation {
+        display: block;
+    }  
+}
+
+#description-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-header {
     color: var(--salmon-color);
     font-size: 22px;
     font-family: var(--cursive-font);
-    font-weight: 400;
+    font-style:italic ;
 }
 
-.section-description{
-    font-size: 30px;
+.section-description {
+    font-size: 20px;
     font-family: var(--main-font);
     color: #868686;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    padding-top: 40px;
 }
 
-h1{
+h1 {
     font-size: 35px;
-    color: #333;
+    color: var(--black-color);
     font-family: Lexend,sans-serif;
-    text-align: left;
+    font-weight: 700;
+    line-height: 1.1;
+    padding-top: 20px;
 }
 
 h1 span{
-    color: #F7B5A8;
+    color: var(--salmon-color);
 }
 
-.main-page-buttons{
+.main-page-buttons {
+   padding-top: 40px;  
    display: flex;
    justify-content: flex-start;
+   flex-wrap: wrap;
 }
 
-#shop-now-button{
-    background-color: #F7B5A8;
+.main-page-buttons a {
+   margin: 10px 20px 10px 0;
+   text-decoration: none;
+   padding: 20px 30px;
+   width: fit-content;
+   font-family: var(--main-font);
+   font-size: 15px;
+   font-weight: 700;
+}
+
+#shop-now-button {
+    background-color: var(--salmon-color);
     color: #FCFFF9;
 }
 
+
+#about-us-button {
+    border: 2px solid var(--black-color);
+    color: var(--black-color);
+}
+
+/* 
 .red-buttons {
     margin: 20px;
     padding: 20px;
     background-color: #F7B5A8;
-}
+} */
 
-.main-page-buttons a{
-    margin: 20px;
-    padding: 20px;
-}
+
 /* 
 #about-us-button{
     color: black;
