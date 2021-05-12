@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
+*{
+    margin: 0;
+}
+
+#header-info{
+    background-color:#ecd9d1;
+    width: 100%;
+    color: rgb(147,111,98);
+    font-family: Lato,sans-serif;
+}
+
+header{
+    background-image: url(../img/main-background-image.webp);
+    background-size: cover;
+}
+
+#header-paragraph{
+    padding: 35px;
+}
+
+#header-paragraph span a{
+    color: rgb(147,111,98);
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+#header-main-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#header-navigation a{
+    color: rgb(147,111,98);
+    font-weight: 700;
+    font-family: Lato,sans-serif;
+    text-decoration-line: none;
+}
+    
+#header-social-icons img{
+    color: rgb(147,111,98);
+    width: 30px;
+    height: 30px;
+}
+
+#description-section{
+    margin-top: 200px;
+    max-width: 600px;
+    margin-left: 200px;
+}
+
+.section-header{
+    color: #ebbaa9;
+    font-size: 40px;
+    font-family: 'Niconne', cursive;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.section-description{
+    font-size: 30px;
+    font-family: Lato,sans-serif;
+    color: #868686;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 80px;
+    color: #333;
+    font-family: Lexend,sans-serif;
+    text-align: left;
+}
+
+h1 span{
+    color: #F7B5A8;
+}
+
+.main-page-buttons{
+   display: flex;
+   justify-content: flex-start;
+}
+
+#shop-now-button{
+    background-color: #F7B5A8;
+    color: #FCFFF9;
+}
+
+.red-buttons {
+    margin: 20px;
+    padding: 20px;
+    background-color: #F7B5A8;
+}
+
+.main-page-buttons a{
+    margin: 20px;
+    padding: 20px;
+}
+
+#about-us-button{
+    color: black;
+    border: 1px solid black;
+}
+
+#design-section-beige-up{
+    background-image: url(../img/design-section-beige-up-picture.webp);
+    width: 100%;
+    min-height: 129px;
+}
+
+#about-us-content{
+    display: flex;
+    justify-content: center;
+    /* background-color:  */
+}
+
+.section-title{
+    font-size: 42px;
+    color: #333;
+    font-family: Lexend,sans-serif;
+}
+
+.branch-logo{
+    max-width: 80px;
+}
+
+#about-us-content .marks{
+    color: #F7B5A8;
+    max-width: 15px;
+}
+
+#about-us-content li{
+    font-size: 17px;
+    font-family: Lato, sans-serif;
+    color: #868686;
+}
+
+#about-us-content .section-description{
+    font-size: 17px;
+    font-family: Lato, sans-serif;
+    color: #868686;
+    margin: 20px;
+}
+
+#about-us-content .notes{
+    margin: 10px;
+    font-size: 17px;
+    font-family: Lato,sans-serif;
+    color: #868686;
+}
+
+#matcha-section{
+    background-image: url(../img/matcha-background-image.webp) ;
+    background-size: cover;
+}
+
+#matcha-section .section-header{
+  color: #8BAEA4;
+  font-size: 30px;
+    font-family: 'Niconne', cursive;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#matcha-section .section-title{
+    font-size: 42px;
+    color: rgb(61,125,114);
+    font-family: Lexend,sans-serif;  
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#matcha-section p{
+    color: rgb(132,155,145);
+    font-size: 17px;
+    font-family: Lato,sans-serif;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#matcha-section .branch-logo{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#matcha-content{
+max-width: 700px;
+margin-left: 100px;
+}
+
+#awards img{
+   max-width: 120px;
+   margin-top: 20px;
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
+
+#matcha-section #slider-buttons-award{
+    margin: o auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#categories-section{
+    display: flex;
+}
+
+.soap-categories-images{
+    width: 200px;
+}
+
+#discount-size{
+    background-color: #FDF0E5;
+    width: 500px;
+    height: 200px;
+}
+
+#benefits-section img{
+    width: 90px;
+}
+
+.soap-image{
+    width: 200px;
+}
+
+.blog-items img{
+    width: 600px;
+}
