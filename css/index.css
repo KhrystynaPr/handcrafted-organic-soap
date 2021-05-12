@@ -7,19 +7,20 @@
 :root {
    --salmon-color: #ebbaa9;
     --main-font: Lato,sans-serif;
-    --accent-color: rgb(50, 206, 211);
+    --cursive-font: font-family: 'Niconne', cursive;
   }
 
   #header-logo img{
     display: block;
     width: 146px;
+    
   }
 
 #header-info{
     background-color:#ecd9d1;
     width: 100%;
     color: rgb(147,111,98);
-    font-family: Lato,sans-serif;
+    font-family: var(--main-font);
 }
 
 .burger-icon {
@@ -70,6 +71,8 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 #header-navigation {
@@ -81,7 +84,7 @@ header{
 #header-navigation a{
     color: rgb(147,111,98);
     font-weight: 700;
-    font-family: Lato,sans-serif;
+    font-family: var(--main-font);
     text-decoration-line: none;
 }
     
@@ -91,30 +94,29 @@ header{
     height: 30px;
 }
 
-#description-section{
+/* #description-section{
     margin-top: 200px;
     max-width: 600px;
     margin-left: 200px;
-}
+} */
 
 .section-header{
-    color: #ebbaa9;
-    font-size: 40px;
-    font-family: 'Niconne', cursive;
+    color: var(--salmon-color);
+    font-size: 22px;
+    font-family: var(--cursive-font);
     font-weight: 400;
-    font-style: italic;
 }
 
 .section-description{
     font-size: 30px;
-    font-family: Lato,sans-serif;
+    font-family: var(--main-font);
     color: #868686;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 h1{
-    font-size: 80px;
+    font-size: 35px;
     color: #333;
     font-family: Lexend,sans-serif;
     text-align: left;
@@ -144,7 +146,7 @@ h1 span{
     margin: 20px;
     padding: 20px;
 }
-
+/* 
 #about-us-button{
     color: black;
     border: 1px solid black;
@@ -159,7 +161,6 @@ h1 span{
 #about-us-content{
     display: flex;
     justify-content: center;
-    /* background-color:  */
 }
 
 .section-title{
@@ -193,7 +194,7 @@ h1 span{
 #about-us-content .notes{
     margin: 10px;
     font-size: 17px;
-    font-family: Lato,sans-serif;
+    font-family: var(--main-font);
     color: #868686;
 }
 
@@ -205,7 +206,7 @@ h1 span{
 #matcha-section .section-header{
   color: #8BAEA4;
   font-size: 30px;
-    font-family: 'Niconne', cursive;
+    font-family: var(--cursive-font);
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -221,7 +222,7 @@ h1 span{
 #matcha-section p{
     color: rgb(132,155,145);
     font-size: 17px;
-    font-family: Lato,sans-serif;
+    font-family: var(--main-font);
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -274,4 +275,4 @@ margin-left: 100px;
 
 .blog-items img{
     width: 600px;
-}
+} */
