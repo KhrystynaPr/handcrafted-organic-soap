@@ -21,6 +21,7 @@ body{
 header{
     background-image: url(../img/main-background-image.webp);
     background-size: cover;
+    background-position: center;
 }
 
 .wrapper{
@@ -149,11 +150,12 @@ h1 span{
 .main-page-buttons a {
    margin: 10px 20px 10px 0;
    text-decoration: none;
-   padding: 20px 30px;
+   padding: 20px 32px;
    width: fit-content;
    font-family: var(--main-font);
    font-size: 15px;
    font-weight: 700;
+   letter-spacing: 1px;
 }
 
 #shop-now-button {
