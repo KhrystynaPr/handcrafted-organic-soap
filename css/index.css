@@ -102,7 +102,7 @@ header{
 }
 
 .mobile-info p{
-    margin-top: 17px;
+    margin-top: 18px;
     text-align: center;
     color: rgb(147,111,98);
     font-family: var(--main-font);
@@ -114,17 +114,17 @@ header{
 #mobile-shop-link{
     cursor: pointer;
     margin-top: 40px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     line-height: 2.5px;
 }
 
 #mobile-shop-link a{
     color: rgb(147,111,98);
+    text-decoration: none;
 }
 
-#mobile-wrapper svg{
-    color: rgb(147,111,98);
+#mobile-social-icons {
     width: 30px;
     height: 30px;
 }
