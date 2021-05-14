@@ -31,27 +31,27 @@ header{
 
 #header-info{
     background-color:#ecd9d1;
-    color: rgb(147,111,98);
-    font-family: var(--main-font);
     display: none;
     padding: 33px 24px;
+}
+
+.menu-paragraph{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(147,111,98);
+    font-family: var(--main-font);
     font-size: 12px;
     font-weight: bold;
     line-height: 2.5px;
 }
 
-#header-paragraph{
-    display: flex;
-    justify-content: space-between;
-}
-
-#header-paragraph span a{
+.menu-paragraph span a{
     color: rgb(147,111,98);
     cursor: pointer;
     text-decoration-line: none;
 }
 
-#header-main-menu{
+.header-main-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +59,7 @@ header{
     padding-bottom: 30px;
 }
 
-#header-logo img {
+.header-logo img {
     display: block;
     width: 146px;
 }
@@ -68,11 +68,72 @@ header{
     display: none;
 }
 
-#burger-checkbox:checked ~ #main-navigation {
+#burger-checkbox:checked ~ #mobile-navigation-section {
     display: block;
 }
 
-#main-navigation {
+#mobile-navigation-section {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FDF0E5;
+}
+
+#mobile-wrapper {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+#mobile-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mobile-navigation a {
+    margin-bottom: 23px;
+    color: rgb(147,111,98);
+    font-weight: 700;
+    font-family: var(--main-font);
+    text-decoration-line: none;
+}
+
+.mobile-info p{
+    margin-top: 17px;
+    text-align: center;
+    color: rgb(147,111,98);
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2.5px;
+}
+
+#mobile-shop-link{
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2.5px;
+}
+
+#mobile-shop-link a{
+    color: rgb(147,111,98);
+}
+
+#mobile-wrapper svg{
+    color: rgb(147,111,98);
+    width: 30px;
+    height: 30px;
+}
+
+#close-checkbox {
+    display: none;
+}
+
+#close-checkbox:checked ~ #mobile-wrapper {
     display: none;
 }
 
@@ -90,11 +151,11 @@ header{
     margin: 0 20px;
 }
 
-#header-social-icons{
+.header-social-icons{
     display: none;
 }
 
-#header-social-icons img{
+.header-social-icons svg{
     color: rgb(147,111,98);
     width: 30px;
     height: 30px;
@@ -209,15 +270,11 @@ h1 span{
         display: block;
     }
 
-    #main-navigation {
-        display: block;
-    }  
-
     #header-navigation {
         display: block;
     }
 
-    #header-social-icons{
+    .header-social-icons{
         display: block;
     }
 }
