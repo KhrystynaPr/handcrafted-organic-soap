@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lexend:wght@100;500;600;700&family=Niconne&display=swap');
 
 :root {
-   --main-color: #ebbaa9;
-   --header-color: #333;
+    --main-color: #ebbaa9;
+    --header-color: #333;
+    --paragraph-color: #868686;
+    --menu-color:rgb(147,111,98);
     --main-font: Lato,sans-serif;
     --cursive-font: 'Niconne', cursive;
+    
   }
 
 * {
@@ -28,7 +31,7 @@
 .menu-paragraph {
     display: flex;
     justify-content: space-between;
-    color: rgb(147,111,98);
+    color: var(--menu-color);
     font-family: var(--main-font);
     font-size: 12px;
     font-weight: bold;
@@ -36,7 +39,7 @@
 }
 
 .menu-paragraph span a {
-    color: rgb(147,111,98);
+    color: var(--menu-color);
     cursor: pointer;
     text-decoration-line: none;
 }
@@ -63,7 +66,7 @@
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(147,111,98);
+    color: var(--menu-color);
     font-weight: 700;
     font-family: var(--main-font);
     text-decoration-line: none;
@@ -80,7 +83,7 @@
 }
 
 .header-social-icons svg{
-    color: rgb(147,111,98);
+    color: var(--menu-color);
     width: 30px;
     height: 30px;
 }
@@ -97,6 +100,7 @@
     font-size: 22px;
     font-family: var(--cursive-font);
     font-style:italic ;
+    margin-top: 50px;
 }
 
 h1 {
@@ -108,27 +112,27 @@ h1 {
     padding-top: 20px;
 }
 
-h1 span{
+.addition-color-span{
     color: var(--main-color);
 }
 
 .section-description {
     font-size: 20px;
     font-family: var(--main-font);
-    color: #868686;
+    color: var(--paragraph-color);
     line-height: 1.5;
     padding-top: 40px;
 }
 
-.main-page-buttons {
-    padding-top: 40px;  
+.buttons-box {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    padding-top: 40px;
  }
 
-.main-page-buttons a {
-    margin: 10px 20px 10px 0;
+ .button {
+    margin: 0 20px 10px 0;
     text-decoration: none;
     padding: 20px 24px;
     width: fit-content;
@@ -136,16 +140,14 @@ h1 span{
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 1px;
- }
- 
- #shop-now-button {
-     background-color: var(--main-color);
+    background-color: var(--main-color);
      color: #FCFFF9;
  }
  
  #about-us-button {
      border: 2px solid var(--header-color);
      color: var(--header-color);
+     background: none;
  }
 
 @media (min-width: 768px) {
@@ -206,66 +208,43 @@ h1 span{
 
 }
 
- #design-section-beige-up{
+ #design-section-beige-up {
     background-image: url(../img/design-section-beige-up-picture.webp);
     min-height: 129px;
+    margin-bottom: 70px;
     }
 
-/* 
-.red-buttons {
-    margin: 20px;
-    padding: 20px;
-    background-color: #F7B5A8;
-} */
-
-
-/* 
-
-#design-section-beige-up{
-    background-image: url(../img/design-section-beige-up-picture.webp);
-    width: 100%;
-    min-height: 129px;
-}
-
-#about-us-content{
+#about-us-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+    list-style-image: url("../img/little-leaves.svg");
 }
 
-.section-title{
+#about-us-content-picture img {
+    max-width: 650px;
+}
+
+.branch-logo {
+    max-width: 70px;
+}
+
+h2 {
     font-size: 42px;
-    color: #333;
+    color: var(--header-color);
     font-family: Lexend,sans-serif;
+    font-weight: 700;
 }
 
-.branch-logo{
-    max-width: 80px;
-}
-
-#about-us-content .marks{
-    color: #F7B5A8;
-    max-width: 15px;
-}
-
-#about-us-content li{
+.notes{
     font-size: 17px;
-    font-family: Lato, sans-serif;
-    color: #868686;
+    line-height: 2.5;
+    font-family: Lato,sans-serif;
+    color: var(--paragraph-color);
 }
+ 
 
-#about-us-content .section-description{
-    font-size: 17px;
-    font-family: Lato, sans-serif;
-    color: #868686;
-    margin: 20px;
-}
-
-#about-us-content .notes{
-    margin: 10px;
-    font-size: 17px;
-    font-family: var(--main-font);
-    color: #868686;
-}
+/* 
 
 #matcha-section{
     background-image: url(../img/matcha-background-image.webp) ;
