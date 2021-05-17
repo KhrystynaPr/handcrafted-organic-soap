@@ -209,7 +209,6 @@ h1 {
     .additional-burger-info {
         display: none;
     }
-
 }
 
  #design-section-beige-up {
@@ -319,12 +318,32 @@ h3 {
     text-align: center;
 }
 
-.soap-categories .button{
-    
+/* #discount-proposition-section {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+#discount-size {
+    padding: 31px 27px;
+    max-width: 100%;
+    height: auto;
+    background-color: #FDF0E5;
+}
 
+#discount-size .addition-color-span {
+font-size: 35px;
+color: (var(--main-color));
+}
 
+#go-to-shop {
+    padding: 31px 27px;
+    max-width: 100%;
+    height: auto;
+    background-image: url(../img/discount-background-image.webp);
+    background-size: cover;
+} */
 
 /* 
 
