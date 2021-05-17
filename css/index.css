@@ -5,11 +5,10 @@
 :root {
     --main-color: #ebbaa9;
     --header-color: #333;
-    --paragraph-color: #868686;
+    --paragraph-color: #a59489;
     --menu-color:rgb(147,111,98);
     --main-font: Lato,sans-serif;
     --cursive-font: 'Niconne', cursive;
-    
   }
 
 * {
@@ -92,7 +91,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 40px;
-    max-width: 270px;
+    max-width: 500px;
 }
 
 .section-header {
@@ -171,6 +170,11 @@ h1 {
     .section-description {
         padding-top: 20px;
     }    
+
+    .soap-categories {
+        max-width: 230px;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -194,7 +198,7 @@ h1 {
     #description-section {
         padding-top: 140px;
         padding-bottom: 140px;
-        max-width: 470px;
+        max-width: 500px;
     }
 
     h1 {
@@ -215,18 +219,26 @@ h1 {
     }
 
 #about-us-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;  
+    display: grid;
     list-style-image: url("../img/little-leaves.svg");
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+#about-us-content li{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #about-us-content-picture img {
-    max-width: 650px;
+    max-width: 100%;
+    height: auto;
 }
 
 .branch-logo {
     max-width: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -238,74 +250,84 @@ h2 {
 
 .notes{
     font-size: 17px;
-    line-height: 2.5;
     font-family: Lato,sans-serif;
     color: var(--paragraph-color);
 }
  
-
-/* 
-
 #matcha-section{
     background-image: url(../img/matcha-background-image.webp) ;
     background-size: cover;
+    padding-top: 30px;
+    margin-top: 70px;
 }
 
-#matcha-section .section-header{
-  color: #8BAEA4;
-  font-size: 30px;
-    font-family: var(--cursive-font);
-    margin-top: 15px;
-    margin-bottom: 15px;
+#matcha-section .green-notes{
+  color: #809C91;
 }
 
-#matcha-section .section-title{
-    font-size: 42px;
-    color: rgb(61,125,114);
-    font-family: Lexend,sans-serif;  
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-#matcha-section p{
-    color: rgb(132,155,145);
-    font-size: 17px;
-    font-family: var(--main-font);
-    font-weight: 400;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-#matcha-section .branch-logo{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
+ 
 #matcha-content{
 max-width: 700px;
-margin-left: 100px;
+text-align: left;
 }
 
 #awards img{
-   max-width: 120px;
-   margin-top: 20px;
-   margin-top: 15px;
-   margin-bottom: 15px;
+   max-width: 200px;
+   margin: auto;
 }
 
-#matcha-section #slider-buttons-award{
-    margin: o auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+#awards button {
+    margin-top: 20px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-left: 20px;
 }
 
-#categories-section{
-    display: flex;
+.uppercase-letter {
+    text-transform: uppercase;
 }
 
-.soap-categories-images{
-    width: 200px;
+#categories-section {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 40px; 
 }
+
+.soap-categories {
+    max-width: 230px;
+}
+
+.soap-categories p{
+    padding-top: 20px;
+    max-width: 230px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.soap-categories img {
+    padding-top: 60px;
+    max-width: 100%;
+    margin: auto;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.soap-categories .button{
+    
+}
+
+
+
+
+/* 
+
 
 #discount-size{
     background-color: #FDF0E5;
