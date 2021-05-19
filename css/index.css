@@ -24,6 +24,7 @@
     background-image: url(../img/main-background-image.webp);
     background-size: cover;
     background-position: center;
+    min-height: 1000px;
 }
 
 #header-info {
@@ -223,13 +224,13 @@ h1 {
     font-weight: 700;
     letter-spacing: 1px;
     background-color: var(--main-color);
-     color: #FCFFF9;
+    color: #FCFFF9;
  }
  
  #about-us-button {
-     border: 2px solid var(--header-color);
-     color: var(--header-color);
-     background: none;
+    border: 2px solid var(--header-color);
+    color: var(--header-color);
+    background: none;
  }
 
  #design-section-beige-up {
@@ -305,13 +306,13 @@ h2 {
 }
 
 #matcha-section .green-notes {
-  color: var(--matcha-paragraph-color);
+    color: var(--matcha-paragraph-color);
 }
 
  
 #matcha-content {
-max-width: 600px;
-text-align: left;
+    max-width: 600px;
+    text-align: left;
 }
 
 #awards img {
@@ -493,7 +494,8 @@ h3 {
     background-image: url(../img/benefits-background-picture.svg);
     padding-left: 30px;
     padding-right: 30px;
-    min-height: 720px;
+    min-height: 840px;
+    background-position: top;
 }
 
 @media (min-width: 768px) {
@@ -517,10 +519,15 @@ h3 {
  
 @media (min-width: 768px) {
     .benefits-content {
-        /* max-width: 600px; */
         text-align: left;
-        padding-left: 400px;
         padding-top: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .benefits-content {
+        padding-top: 50px;
+        padding-left: 500px;
     }
 }
 
@@ -540,19 +547,19 @@ h3 {
     width: 55px;
     height: 55px;
     padding: 12px;
-    background-color: #DBCAF1;
+    background-color: var(--benefits-paragraph-color);
+    opacity: 0.5;
     border-radius: 50%;
     margin-top: 40px;
 }
 
 .benefits-icons svg {
     max-width: 100%;
-    color: var(--benefits-paragraph-color)
+    color: var(--benefits-capital-color)
 }
 
 #design-section-fiolet-down {
-    background-image: url(../img/design-section-fiolet-up-picture.webp);
+    background-image: url(../img/design-section-fiolet-down-picture.webp);
     min-height: 129px;
-    margin-top: 70px;
-    }
 }
+
