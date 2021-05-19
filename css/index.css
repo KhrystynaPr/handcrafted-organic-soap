@@ -7,6 +7,10 @@
     --header-color: #333;
     --paragraph-color: #a59489;
     --menu-color:rgb(147,111,98);
+    --matcha-capital-color: #008472;
+    --matcha-paragraph-color:#809C91;
+    --benefits-capital-color:#89308B;
+    --benefits-paragraph-color:#A2809B;
     --main-font: Lato,sans-serif;
     --cursive-font: 'Niconne', cursive;
     --paragraph-font: Lexend,sans-serif;
@@ -29,11 +33,9 @@
 }
 
 @media (min-width: 992px) {
-
     #header-info {
         display: block;
     }
-
 }    
 
 .menu-paragraph {
@@ -82,11 +84,9 @@
 }
 
 @media (min-width: 992px) {
-
     .navbar-nav {
         margin-top: 0;
     }
-
 }
 
 .navbar-nav hr {
@@ -101,7 +101,6 @@
 }
 
 @media (min-width: 992px) {
-
     .navbar navbar-expand-lg navbar-light {
         display: none;
     }
@@ -130,7 +129,6 @@
 }
 
 @media (min-width: 768px) {
-
     #description-section {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -138,17 +136,14 @@
         margin-left: 50px;
         margin-right: 50px;
     }
-
 }
 
 @media (min-width: 992px) {
-
     #description-section {
         padding-top: 140px;
         padding-bottom: 140px;
         max-width: 500px;
     }
-
 }
 
 .section-header {
@@ -160,11 +155,9 @@
 }
 
 @media (min-width: 768px) {
-
     .section-header {
         font-size: 26px;
     }
-
 }
 
 h1 {
@@ -177,21 +170,17 @@ h1 {
 }
 
 @media (min-width: 768px) {
-
     h1 {
         font-size: 59px;
         padding-top: 5px;
     }
-
 }
 
 @media (min-width: 768px) {
-
     h1 {
         font-size: 64px;
         padding-top: 5px;
     }
-
 }
 
 .addition-color-span {
@@ -203,15 +192,13 @@ h1 {
     font-family: var(--main-font);
     color: var(--paragraph-color);
     line-height: 1.5;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 @media (min-width: 768px) {
-
     .section-description {
         padding-top: 20px;
     } 
-
 }
 
 .buttons-box {
@@ -248,7 +235,7 @@ h1 {
  #design-section-beige-up {
     background-image: url(../img/design-section-beige-up-picture.webp);
     min-height: 129px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     }
 
 #about-us-content {
@@ -260,15 +247,12 @@ h1 {
 }
 
 @media (min-width: 768px) {
-
     #about-us-content {
     display: grid;
     list-style-image: url("../img/little-leaves.svg");
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-       
     } 
-
 }
 
 #about-us-content li{
@@ -310,25 +294,23 @@ h2 {
 }
 
 @media (min-width: 768px) {
-    
     #matcha-section {
         padding-left: 50px;
         padding-right: 50px;
     }
-
 }
 
 #matcha-section h2 {
-    color: #008472;
+    color: var(--matcha-capital-color);
 }
 
 #matcha-section .green-notes {
-  color: #809C91;
+  color: var(--matcha-paragraph-color);
 }
 
  
 #matcha-content {
-max-width: 700px;
+max-width: 600px;
 text-align: left;
 }
 
@@ -359,12 +341,10 @@ text-align: left;
 }
 
 @media (min-width: 768px) {
-    
     #categories-section {
         padding-left: 50px;
         padding-right: 50px;
     }
-
 }
 
 .soap-categories {
@@ -372,11 +352,9 @@ text-align: left;
 }
 
 @media (min-width: 768px) {
-
     .soap-categories {
         max-width: 230px;
     }
-
 }
 
 .soap-categories p{
@@ -408,8 +386,8 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
 
@@ -417,7 +395,9 @@ h3 {
     #discount-proposition-section  {
         display: grid;
         grid-template-columns: 43% 57%;
-        gap: 30px
+        gap: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
@@ -501,27 +481,41 @@ h3 {
     font-size: 14px;
     color:#D48BC7;
     text-decoration: none;
-
 }
 
+#design-section-fiolet-up {
+    background-image: url(../img/design-section-fiolet-up-picture.webp);
+    min-height: 129px;
+    margin-top: 70px;
+    }
 
-/* 
-
-
-#discount-size{
-    background-color: #FDF0E5;
-    width: 500px;
-    height: 200px;
+#benefits-section {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-#benefits-section img{
-    width: 90px;
+@media (min-width: 768px) {
+    #benefits-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
-.soap-image{
-    width: 200px;
+#benefits-section h2 {
+    color: var(--benefits-capital-color);
 }
 
-.blog-items img{
-    width: 600px;
-} */
+#benefits-section p{
+    color: var(--benefits-paragraph-color);
+}
+ 
+.benefits-content {
+    max-width: 600px;
+    text-align: left;
+    }
+
+.benefits-icons {
+    width: 50px;
+    background-color: #DBCAF1;
+    border-radius: 50%;
+}
