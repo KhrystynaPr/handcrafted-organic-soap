@@ -490,6 +490,7 @@ h3 {
     }
 
 #benefits-section {
+    background-image: url("../img/benefits-background-picture.png");
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -512,6 +513,7 @@ h3 {
 .benefits-content {
     max-width: 600px;
     text-align: left;
+    
     }
 
 .benefits-icons {
