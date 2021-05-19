@@ -11,8 +11,8 @@
     --matcha-paragraph-color:#809C91;
     --benefits-capital-color:#794B8B;
     --benefits-paragraph-color:#827189;
-    --benefits-icons-background-color:rgba(128, 98, 188, 0.5);
-    --benefits-icons-color:#987AA4;
+    --benefits-icons-background-color: #8062BC1C;
+    --benefits-icons-color:rgb(152, 122, 164);
     --main-font: Lato,sans-serif;
     --cursive-font: 'Niconne', cursive;
     --paragraph-font: Lexend,sans-serif;
@@ -559,17 +559,25 @@ h3 {
 }
 
 .benefits-icons {
-    width: 75px;
-    height: 75px;
-    padding: 17px;
+    width: 55px;
+    height: 55px;
+    padding: 13px;
     background-color: var(--benefits-icons-background-color);
-    opacity: 0.2;
+    /* opacity: 0.2; */
     border-radius: 50%;
     margin-top: 30px;
 }
 
+@media (min-width: 768px) {
+    .benefits-icons {
+        width: 75px;
+        height: 75px;
+        padding: 17px;
+    }
+}
+
 .benefits-icons svg{
-    color: var(--benefits-capital-color);
+    color: var(--benefits-icons-color);
 }
 
 #design-section-fiolet-down {
