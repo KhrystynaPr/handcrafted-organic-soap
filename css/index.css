@@ -238,7 +238,6 @@ h1 {
     background: linear-gradient(var(--main-color), var(--menu-color));
     color: var(--arrow-color);
     text-decoration: none;
-    font-size: 17px;
 }
 
 main .section-header, h2 {
