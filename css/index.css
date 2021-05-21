@@ -6,6 +6,7 @@
     --main-color: #ebbaa9;
     --additional-background-color:#FDF0E5;
     --header-color: #333;
+    --arrow-color: #FCFFF9;
     --paragraph-color: #a59489;
     --menu-color:rgb(147,111,98);
     --matcha-capital-color: #008472;
@@ -14,6 +15,10 @@
     --benefits-paragraph-color:#827189;
     --benefits-icons-background-color: #8062BC1C;
     --benefits-icons-color:rgb(152, 122, 164);
+    --bath-routine-background-color: rgb(247, 204, 217); 
+    --bath-routine-paragraph-color:rgb(192,130,147);
+    --bath-routine-capital-color:rgb(214,113,142);
+    --bath-routine-main-paragraph-color:rgb(153,96,122);
     --main-font: Lato,sans-serif;
     --cursive-font: 'Niconne', cursive;
     --paragraph-font: Lexend,sans-serif;
@@ -180,7 +185,7 @@ h1 {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     h1 {
         font-size: 64px;
         padding-top: 5px;
@@ -209,15 +214,15 @@ h1 {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 40px;
- }
+}
 
- .buttons-box .button {
+.buttons-box .button {
     margin-right: 20px; 
     margin-bottom: 20px;
- }
+}
 
 
- .button {
+.button {
     text-decoration: none;
     padding: 20px;
     width: fit-content;
@@ -226,24 +231,31 @@ h1 {
     font-weight: 700;
     letter-spacing: 1px;
     background-color: var(--main-color);
-    color: #FCFFF9;
- }
+    color: var(--arrow-color);
+}
 
- main .section-header, h2 {
+.button:hover {
+    background: linear-gradient(var(--main-color), var(--menu-color));
+    color: var(--arrow-color);
+    text-decoration: none;
+    font-size: 17px;
+}
+
+main .section-header, h2 {
      text-align: center;
- }
+}
  
- #about-us-button {
+#about-us-button {
     border: 2px solid var(--header-color);
     color: var(--header-color);
     background: none;
- }
+}
 
  #design-section-beige-up {
     background-image: url(../img/design-section-beige-up-picture.webp);
     min-height: 129px;
     margin-bottom: 60px;
-    }
+}
 
 #about-us-content {
     display: flex;
@@ -255,14 +267,14 @@ h1 {
 
 @media (min-width: 768px) {
     #about-us-content {
-    display: grid;
-    list-style-image: url("../img/little-leaves.svg");
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+        display: grid;
+        list-style-image: url("../img/little-leaves.svg");
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     } 
 }
 
-#about-us-content li{
+#about-us-content li {
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -286,7 +298,7 @@ h2 {
     font-weight: 700;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
     h2 {
         font-size: 38px;
     }
@@ -510,7 +522,7 @@ h3 {
     background-image: url(../img/design-section-fiolet-up-picture.webp);
     min-height: 129px;
     margin-top: 70px;
-    }
+}
 
 #benefits-section {
     background-image: url(../img/benefits-background-picture.svg);
@@ -704,7 +716,7 @@ article a {
 }  
 
 .bath-routine-content {
-    background-color: rgb(247, 204, 217);
+    background-color: var(--bath-routine-background-color);
     padding: 50px 20px;
 }
 
@@ -715,19 +727,19 @@ article a {
 
 .bath-routine-content .section-header {
     margin-top: 0;
-    color: rgb(192,130,147);
+    color: var(--bath-routine-paragraph-color);
 }
 
 .bath-routine-content .section-description {
-    color: rgb(153,96,122);
+    color: var(--bath-routine-main-paragraph-color);
 }
 
 .bath-routine-content h2{
-    color:rgb(214,113,142);
+    color: var(--bath-routine-capital-color);
 }
 
 .bath-routine-content p {
-    color: rgb(192,130,147);
+    color: var(--bath-routine-paragraph-color);
     margin-top: 10px;
 }
 
@@ -738,4 +750,75 @@ article a {
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 40px;
+}
+
+#testimonials-section {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+#carouselControls {
+    margin-top: 40px;
+}
+
+#testimonials-section .carousel-item {
+    border: 1px solid var(--main-color);
+    padding: 40px;
+}
+
+.carousel-item h2 {
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: 600;
+} 
+
+.client-testimonial {
+    font-style: var(--main-font);
+    font-style: italic;  
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.testimonial-date {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.carousel-control-prev {
+    color: black;
+}
+
+.blog-content img {
+    display: block;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .blog-content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.blog-items {
+    padding: 35px 20px;
+}
+
+.blog-items h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-items p {
+    font-weight: 400;
+    font-size: 17px;
+
 }
