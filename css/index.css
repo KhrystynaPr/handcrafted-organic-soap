@@ -973,7 +973,7 @@ footer {
     background: var(--additional-background-color);
 }
 
-#footer-content {
+/* #footer-content {
     padding: 100px 20px;
 }
 
@@ -988,4 +988,4 @@ footer {
     color: var(--main-color);
     width: 30px;
     height: 30px;
-}
+} */
