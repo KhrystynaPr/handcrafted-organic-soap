@@ -143,8 +143,6 @@
         padding-top: 100px;
         padding-bottom: 100px;
         max-width: 380px;
-        margin-left: 50px;
-        margin-right: 50px;
     }
 }
 
@@ -325,13 +323,6 @@ h2 {
     padding-right: 20px;
 }
 
-@media (min-width: 768px) {
-    #matcha-section {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
-
 #matcha-section .green-notes {
     color: var(--matcha-paragraph-color);
     font-family: var(--main-font);
@@ -370,33 +361,43 @@ h2 {
 
 #categories-section {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 40px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-@media (min-width: 768px) {
-    #categories-section {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-}
-
-.soap-categories {
-    max-width: 230px;
+#categories-content {
+    max-width: 400px;
 }
 
 @media (min-width: 768px) {
     .soap-categories {
-        max-width: 230px;
+        max-width: 180px;
     }
+}
+
+.categories-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-button {
+    font-size: 70px;
+    color: var(--main-color);
+    background: none;
+    border: none;
 }
 
 .soap-categories p{
     padding-top: 20px;
-    max-width: 230px;
     margin: auto;
     text-align: center;
     padding-bottom: 30px;
@@ -420,7 +421,6 @@ h3 {
     text-align: center;
     font-family: var(--main-font);
     font-weight: 600;
-    letter-spacing: ;
 }
 
 #discount-proposition-section {
@@ -438,8 +438,6 @@ h3 {
         display: grid;
         grid-template-columns: 43% 57%;
         gap: 30px;
-        padding-left: 50px;
-        padding-right: 50px;
     }
 }
 
@@ -454,7 +452,6 @@ h3 {
 
 @media (min-width: 768px) {
     #discount-size {
-        padding: 70px 30px;
         margin-bottom: 0
     }
 }
@@ -537,13 +534,6 @@ h3 {
     padding-right: 20px;
     min-height: 840px;
     background-position: top;
-}
-
-@media (min-width: 768px) {
-    #benefits-section {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
 }
 
 #benefits-section h2 {
@@ -676,13 +666,6 @@ article a {
     text-align: center;
     margin-bottom: 50px;
     width: 100%;
-}
-
-@media (min-width: 768px) {
-    #expert-support-content {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
 }
 
 @media (min-width: 992px) {
