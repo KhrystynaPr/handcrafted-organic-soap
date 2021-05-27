@@ -1,0 +1,96 @@
+const products = `
+[
+  {
+    "id": "1",
+    "name": "Lemon Start",
+    "description": "It's so refreshing and makes you feel so moisturized afterward! This soap is definitely for those who like fresh aromas. Lemon Start soap smells like sweet lemon. It is hydrating and has a slight exfoliating feel.",
+    "ingredients": "Rosewood Oil, Cocoa Butter, Coconut Oil, Sicilian Lemon Oil, Fresh Lemon Peel, Almond Oil.",
+    "imgUrl": "img/lemon-start.png",
+    "price": 3
+  },
+
+  {
+    "id": "2",
+    "name": "Fresh Touch",
+    "description": "Start your day with fresh and seductive flavors!<br>With the combination of uplifting rose geranium oil, intriguing ylang ylang oil, and fresh lemongrass oil, Fresh Touch is a soap for your perfect morning.",
+    "ingredients": "Yalang-Ylang Essential Oil (Cananga odorata), Rose Geranium Essential Oil (Pelargonium graveolens), Lemongrass Essential Oil (Cymbopogon citratus), Olive Oil (Olea europaea), Cocoa Butter (Theobroma cacao), Coconut Oil (Cocos nucifera), Rice Bran oil (oryza sativa).",
+    "imgUrl": "img/fresh-touch.png",
+    "price": 2
+  },
+
+  {
+    "id": "3",
+    "name": "Tender Lavander",
+    "description": "This Tender Lavender soap is full of natural ingredients handcrafted to cleanse and soothe your skin. It's made with pure and tranquilizing lavender, as well as some other great ingredients. It's perfect for any occasion but definitely best before going to bed!",
+    "ingredients": "Lavender Essential Oil, Coconut Oil, Almond Oil, Organic Orange Essential Oil, Olive Oil, Dried Lavender.",
+    "imgUrl": "img/tender-lavander.png",
+    "price": 4
+  },
+
+  {
+    "id": "4",
+    "name": "Lemon & Vanilla",
+    "description": "Fresh but sweet? We can do that! Meet our Lemon & Vanilla soap reminding of a lemon cheesecake. It lathers nicely and leaves your skin feeling nice, totally clean, and soft.",
+    "ingredients": "Coconut Oil Water (Aqua), Rapeseed Oil, Lemon Oil, Sodium Hydroxide, Vanilla extract.",
+    "imgUrl": "img/lemon-vanilla.png",
+    "price": 3
+  },
+
+  {
+    "id": "5",
+    "name": "Matcha Tea",
+    "description": "This 100% natural matcha soap is made with organic shea butter, liquid honey, matcha powder, and lemon fragrances. Matcha is anti-bacterial and features incredibly high levels of epigallocatechin gallate (EGCG) which reduces inflammation and even skin tone. Matcha can also reduce acne, so it's a perfect choice for those who have problem skin.",
+    "ingredients": "Matcha Green Tea, Shea Butter, Coconut Oil, Peach Extract.",
+    "imgUrl": "img/matcha-tea.png",
+    "price": 2
+  },
+
+  {
+    "id": "6",
+    "name": "Cinnamon Delight",
+    "description": "This cinnamon soap bar contains rich shea butter and organic coconut milk that moistures and cares about your skin. We also add a bit of honey that helps soothe and retain moisture to the skin. Cinnamon leaves give this soap a warm, toasty, and autumn scent.",
+    "ingredients": "Olive oil, coconut oil, shea butter, organic coconut milk, cinnamon leaf essential oil, local honey.",
+    "imgUrl": "img/cinnamon-delight.png",
+    "price": 4
+  },
+
+  {
+    "id": "7",
+    "name": "Caramel Dream",
+    "description": "It's a perfect soap for those who have very sensitive skin. This bar works wonders and doesn't dry your skin out or irritate it. It also features a velvety lather and honey smell. This bar will definitely be your favorite one!",
+    "ingredients": "Coconut Oil, Rapeseed Oil, Sweet Wild Orange Oil, Bergamot Oil, Local Honey, Aloe Vera Extract, Gardenia Extract.",
+    "imgUrl": "img/caramel-dream.png",
+    "price": 4
+  },
+
+  {
+    "id": "8",
+    "name": "Orange Boost",
+    "description": "It's a perfect soap for those who have very sensitive skin. This bar works wonders and doesn't dry your skin out or irritate it. It also features a velvety lather and honey smell. This bar will definitely be your favorite one!",
+    "ingredients": "Coconut Oil, Rapeseed Oil, Sweet Wild Orange Oil, Bergamot Oil, Local Honey, Aloe Vera Extract, Gardenia Extract.",
+    "imgUrl": "img/orange-boost.png",
+    "price": 3
+  }  
+]`;
+
+(function renderProductItems() {
+  const productItems =  JSON.parse(products);
+  let productsHtml = '';
+  for (const product of productItems) {
+    productsHtml += getProductItemHtml(product);
+  }
+  document.querySelector('.shop-items').innerHTML = productsHtml;
+})()
+
+
+function getProductItemHtml (item) {
+  return `
+  <article>
+    <a href="#"><img src="${item.imgUrl}" alt="illustration" class="soap-image"></a>
+    <h3><a href="#" class="soap-name">${item.name}</a></h3>
+    <p class="soap-price">$${item.price}</p>
+    <a href="#cart" class="button">Add to Cart &#x27F6;</a>
+  </article>
+  `;
+}
+

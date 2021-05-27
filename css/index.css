@@ -361,15 +361,22 @@ h2 {
 
 #categories-section {
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
 }
 
-#categories-content {
-    max-width: 400px;
+@media (min-width: 992px) {
+    #categories-section {
+        display: grid;
+        grid-template-columns: 250px 500px;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #categories-section {
+        grid-template-columns: 380px 800px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -379,24 +386,43 @@ h2 {
 }
 
 .categories-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .categories-carousel {
+        display: grid;
+        grid-template-columns: 30px 580px 30px;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .categories-carousel {
+        grid-template-columns: 30px 550px 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .categories-carousel {
+        grid-template-columns: 35px 650px 35px;
+    }
 }
 
 .products {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .card-button {
-    font-size: 70px;
+    font-size: 60px;
     color: var(--main-color);
     background: none;
     border: none;
 }
 
-.soap-categories p{
+.soap-categories p {
     padding-top: 20px;
     margin: auto;
     text-align: center;
