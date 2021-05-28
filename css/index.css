@@ -1126,6 +1126,7 @@ footer {
     font-size: 17px;
     color: var(--matcha-capital-color);
     margin-left: 30px;
+    margin-top: 25px;
 }
 
 #item-main-info h2 {
