@@ -86,8 +86,8 @@ const products = `
 function getProductItemHtml (item) {
   return `
   <article>
-    <a href="#"><img src="${item.imgUrl}" alt="illustration" class="soap-image"></a>
-    <h3><a href="#" class="soap-name">${item.name}</a></h3>
+    <a href="product.html"><img src="${item.imgUrl}" alt="illustration" class="soap-image"></a>
+    <h3><a href="product.html" class="soap-name">${item.name}</a></h3>
     <p class="soap-price">$${item.price}</p>
     <a href="#cart" class="button">Add to Cart &#x27F6;</a>
   </article>
