@@ -34,7 +34,6 @@
       const slide3Container = document.querySelector('.categories-carousel .product-three');
       const product3Idx = product2Idx + 1 >= categories.length ? 0 : product2Idx + 1;
       slide3Container.innerHTML = categories[product3Idx];
-      
   }
 
   function prevSlide() {
@@ -51,5 +50,29 @@
   document.querySelector('.categories-carousel .slide-next').addEventListener('click', nextSlide);
 
   showCurrentSlide();
+
 })();
 
+
+
+(function () {
+
+  function showCart() {
+    document.querySelector('#cart').style.display = "block";
+  }
+
+  function closeCart() {
+    document.querySelector('#cart').style.display = "none";
+  }
+
+  document.querySelector('#cart-icon').addEventListener('click', showCart);
+  document.querySelector('#close-cart').addEventListener('click', closeCart);
+  document.querySelector('#continue-shopping').addEventListener('click', closeCart);
+
+  
+
+
+  
+
+
+})()
