@@ -406,61 +406,70 @@
         </div>
         <hr class="container">
     </footer>
-    <!-- <div id="cart">
-        <div id="cart-icon">                                                                 
+    <div id="cart" class="container">
+        <div id="cart-content">
+            <div id="cart-header">                                                                  
+                <p>Shopping cart</p>
+                <svg width="100" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" style="max-width:100%" height="100%"><path d="M19.7 18.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L12 13.4l-6.3 6.3c-.4.4-1 .4-1.4 0-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l6.3-6.3-6.3-6.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L13.4 12l6.3 6.3z" fill="currentColor" style=""></path><mask id="a6094fde70ad45800227e21e8" maskUnits="userSpaceOnUse" x="4" y="4" width="16" height="16" style="" fill="currentColor"><path d="M19.7 18.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L12 13.4l-6.3 6.3c-.4.4-1 .4-1.4 0-.2-.2-.3-.4-.3-.7 0-.3.1-.5.3-.7l6.3-6.3-6.3-6.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l6.3 6.3 6.3-6.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L13.4 12l6.3 6.3z" fill="currentColor" style=""></path></mask><g mask="url(#a6094fde70ad45800227e21e8)" style="" fill="currentColor"><path fill="currentColor" d="M0 0h24v24H0z" style=""></path></g></svg>
+            </div> 
+            <div id="order-content">
+                <div id="cart-content-header">
+                    <p>PRODUCTS</p>
+                </div>
+                <div id="cart-items">
+                    <div>
+                        <img src="img/lemon-start.png" alt="Natural soap">
+                    </div>
+                    <div class="middle-content">
+                        <div>
+                            <p id="card-soap-title">Lemon Start</p>
+                        </div>
+                        <div class="count">
+                            <span>&minus;</span>
+                            <input type="number" id="quantity"></input>
+                            <span>&plus;</span>
+                        </div>
+                    </div>
+                   <div>
+                        <p>$ 3,00</p>
+                    </div>
+                    <div>
+                        <button id="remove" class="product__remove-item-btn_1Qs"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2H13.6C13.8 2 14 2.2 14 2.4V3.6C14 3.8 13.8 4 13.6 4H0.4C0.2 4 0 3.9 0 3.6V2.4C0 2.2 0.2 2 0.4 2.1H4.1V2L4.9 0.3C5 0.1 5.1 0 5.3 0H8.8C8.9 0 9.1 0.1 9.2 0.2L10 1.9V2ZM1.8 16.1C1.9 17.1 2.8 18 3.8 18H10.1C11.2 18 12 17.2 12.1 16.1L13.1 5H1L1.8 16.1ZM12 6L11.2 16.1C11.2 16.6 10.7 17 10.2 17H3.8C3.3 17 2.8 16.6 2.8 16.1L2 6H12ZM5 8.09998H6V14.1H5V8.09998ZM9 8.09998H8V14.1H9V8.09998Z" fill="#9199AB"></path></svg></button>
+                    </div>
+                </div>
+                <hr>
+                <div id="total">
+                    <p>Total: <span id="total-price">0</span></p>
+                </div>
+                <div id="order-form"> 
+                    <p>PLACE AN ORDER</p>
+                    <form>
+                        <label for="name">Name <span>*</span></label>
+                        <input id="name" type="text" placeholder="Your name">
+                        <label for="email">Email <span>*</span></label>
+                        <input id="email" type="text" placeholder="Your email address">
+                        <label for="phone">Phone <span>*</span></label>
+                        <input id="phone" type="number" placeholder="Your phone">
+                        <label for="comment">Comment </label>  
+                        <textarea id="comment" type="text" placeholder="Your comment"></textarea>
+                    </form>
+                </div>
+            </div>
+            <div id="end-order">
+                 <span>Continue shopping</span>
+                <button>Order</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13C7 11.8954 7.89543 11 9 11H27C28.1046 11 29 11.8954 29 13V28C29 30.2091 27.2091 32 25 32H11C8.79086 32 7 30.2091 7 28V13Z" stroke="#212736" stroke-width="2"></path><path d="M23 15V9C23 6.23858 20.7614 4 18 4V4C15.2386 4 13 6.23858 13 9V15" stroke="#212736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </div>
+    
+        <!-- <div id="cart-icon">                                                                 
             <div id="shopping-cart-logo">shopping cart logo</div>                                 
             <div id="goods-counter">goods counter</div>
-        </div>  
-        <div id="cart-header">                                                                  
-            <p>Shopping cart</p>
-            <button>close icon</button>
-        </div> 
-        <div id="order-content">
-            <p>PRODUCTS</p>
-            <div id="cart-item">
-                <img src="img/lemon-start.png" alt="illustration">
-                <p>Lemon Start</p>
-                <div id="input-cart-items">
-                    <input type="number">
-                    <button>add</button>
-                    <button>subtract</button>
-                </div>
-                <p>$3,00</p>
-                <button>cart icon</button>
-            </div>
-           <div id="total-items">
-                <p>Total</p>
-            </div>
-        </div>
-        <div id="order-form"> 
-            <p>PLACE AN ORDER</p>
-            <form>
-                <div>
-                    <span>Name</span>
-                    <span>*</span>
-                    <input type="text" placeholder="Your name">
-                </div>
-                <div>
-                    <span>Email</span>
-                    <span>*</span>
-                    <input type="text" placeholder="Your email address">
-                </div>
-                <div>
-                    <span>Phone</span>
-                    <span>*</span>
-                    <input type="text" placeholder="Your phone">
-                </div>
-                <div>
-                    <span>Comment</span>  
-                    <input type="text" placeholder="Your comment">
-                </div>
-            </form>
-        </div>
-        <div id="end-order">
-             <span>Continue shopping</span>
-            <button>Order</button>
-        </div>
-    </div> -->
+        </div>   -->
+        
     <script src="js/products.js"></script>
     <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
