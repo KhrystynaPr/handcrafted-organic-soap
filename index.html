@@ -397,8 +397,8 @@
             <div id="subscription">
                 <p>Subscribe to receive our special offers.</p>
                 <div>
-                    <form id="final-form">
-                        <input type="text" placeholder="Email">
+                    <form id="final-form" action="https://formspree.io/f/mjvjwrqd" method="POST">
+                        <input type="text" name="email" placeholder="Email">
                         <button type="submit">Subscribe &#x27F6;</button>
                     </form>
                 </div>
@@ -443,25 +443,26 @@
                 </div>
                 <div id="order-form"> 
                     <p>PLACE AN ORDER</p>
-                    <form>
+                    <form action="https://formspree.io/f/mjvjwrqd" method="POST">
                         <label for="name">Name <span>*</span></label>
-                        <input id="name" type="text" placeholder="Your name">
-                        <label for="email">Email <span>*</span></label>
-                        <input id="email" type="text" placeholder="Your email address">
+                        <input id="name" type="text" name="name" placeholder="Your name" required>
+                        <label for="email" >Email <span>*</span></label>
+                        <input id="email" type="email" name="replyto" placeholder="Your email address" required>
                         <label for="phone">Phone <span>*</span></label>
-                        <input id="phone" type="number" placeholder="Your phone">
+                        <input id="phone" type="number" name="phone" placeholder="Your phone" required>
                         <label for="comment">Comment </label>  
-                        <textarea id="comment" placeholder="Your comment"></textarea>
+                        <textarea id="comment" name="message" placeholder="Your comment"></textarea>
+                        <div id="end-order">
+                            <span id="continue-shopping">Continue shopping</span>
+                            <button class="button" type="submit">Order</button>
+                        </div>
                     </form>
                 </div>
-            </div>
-            <div id="end-order">
-                 <span id="continue-shopping">Continue shopping</span>
-                <button>Order</button>
             </div>
         </div>
     </div>
     <div id="cart-icon">
+        <span id="cart-items-count">5</span>
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 13C7 11.8954 7.89543 11 9 11H27C28.1046 11 29 11.8954 29 13V28C29 30.2091 27.2091 32 25 32H11C8.79086 32 7 30.2091 7 28V13Z" stroke="#212736" stroke-width="2"></path><path d="M23 15V9C23 6.23858 20.7614 4 18 4V4C15.2386 4 13 6.23858 13 9V15" stroke="#212736" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </div>
     <script src="js/products.js"></script>
