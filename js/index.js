@@ -1,3 +1,7 @@
+new ProductList ();
+new Cart();
+
+
 (function() {
   const categories = [
     `<img src="img/sweet-scents.webp" class="d-block w-100" alt="Sweet scents soap">
@@ -52,27 +56,3 @@
   showCurrentSlide();
 
 })();
-
-
-
-(function () {
-
-  function showCart() {
-    document.querySelector('#cart').style.display = "block";
-  }
-
-  function closeCart() {
-    document.querySelector('#cart').style.display = "none";
-  }
-
-  document.querySelector('#cart-icon').addEventListener('click', showCart);
-  document.querySelector('#close-cart').addEventListener('click', closeCart);
-  document.querySelector('#continue-shopping').addEventListener('click', closeCart);
-
-  
-
-
-  
-
-
-})()
