@@ -10,6 +10,13 @@ class Cart {
     return Cart._instance;
   }
 
+  setItemCountToCart (event) {
+    const itemId = event.target.dataset.id;
+    removeItemFromCartStorage(itemId);
+    document.querySelector("#cart-icon").click();
+    updateCartCount();
+  }
+
   removeItemFromCart (event) {
     const itemId = event.target.dataset.id;
     removeItemFromCartStorage(itemId);
@@ -73,12 +80,20 @@ class Cart {
           </div>
         </div>
           `;
-      document.querySelectorAll(".remove").
-      forEach (button =>
+      document.querySelectorAll(".remove")
+      .forEach (button =>
         button.addEventListener('click', event =>
         new Cart().removeItemFromCart(event)
         )
       );
+
+      document.querySelectorAll(".quantity")
+      .forEach (button =>
+        button.addEventListener('onchange', event =>
+        new Cart().removeItemFromCart(event)
+        )
+      );
+
       document.querySelector('#close-cart').addEventListener('click', () => this.closeCart());
       document.querySelector('#continue-shopping').addEventListener('click', () => this.closeCart());
       this.cartModal.style.display = "block";
@@ -99,11 +114,11 @@ const totalPriceOfOneItem = count * item.price;
 </div>
 <div class="middle-content">
   <div>
-      <p id="card-soap-title">${item.name}</p>
+      <p class="card-soap-title">${item.name}</p>
   </div>
   <div class="count">
       <span>&minus;</span>
-      <input type="number" id="quantity" value="${count}">
+      <input type="number" class="quantity" value="${count}">
       <span>&plus;</span>
   </div>
 </div>
