@@ -1,40 +1,44 @@
 class Cart {
   constructor() {
     if (!Cart._instance) Cart._instance = this;
-      
+
     this.cartModal = document.querySelector("#cart");
     this.productService = new ProductsService();
 
-    document.querySelector("#cart-icon").addEventListener('click', () => this.renderCartModal());
+    document
+      .querySelector("#cart-icon")
+      .addEventListener("click", () => this.renderCartModal());
     updateCartCount();
     return Cart._instance;
   }
 
-  setItemCountToCart (event) {
+  removeItemFromCart(event) {
     const itemId = event.target.dataset.id;
     removeItemFromCartStorage(itemId);
     document.querySelector("#cart-icon").click();
     updateCartCount();
+    renderCartIcon();
   }
 
-  removeItemFromCart (event) {
-    const itemId = event.target.dataset.id;
-    removeItemFromCartStorage(itemId);
-    document.querySelector("#cart-icon").click();
-    updateCartCount();
-  }
-  
-  addItemToCart (event) {
+  addItemToCart(event) {
     const itemId = event.target.dataset.id;
     addItemToCartStorage(itemId, 1);
     updateCartCount();
+    renderCartIcon();
+  }
+
+  removeOneItemFromCart(event) {
+    const itemId = event.target.dataset.id;
+    removeOneItemFromCartStorage(itemId);
+    updateCartCount();
+    renderCartIcon();
   }
 
   async renderCartModal() {
-    const productsIdAndCount =  getCartItemsFromStorage();
+    const productsIdAndCount = getCartItemsFromStorage();
 
     let totalPrice = 0;
-    let cartItemsHtml = '';
+    let cartItemsHtml = "";
     for (const id in productsIdAndCount) {
       if (id === "" || id === "undefined" || productsIdAndCount[id] < 1) {
         continue;
@@ -80,23 +84,42 @@ class Cart {
           </div>
         </div>
           `;
-      document.querySelectorAll(".remove")
-      .forEach (button =>
-        button.addEventListener('click', event =>
-        new Cart().removeItemFromCart(event)
+
+    document.querySelectorAll(".add-item").forEach((button) =>
+      button.addEventListener("click", (event) =>
+        (function (event) {
+          const cart = new Cart();
+          cart.addItemToCart(event);
+          cart.renderCartModal();
+        })(event)
+      )
+    );
+
+    document.querySelectorAll(".substract-item").forEach((button) =>
+      button.addEventListener("click", (event) =>
+        (function (event) {
+          const cart = new Cart();
+          cart.removeOneItemFromCart(event);
+          cart.renderCartModal();
+        })(event)
+      )
+    );
+
+    document
+      .querySelectorAll(".remove")
+      .forEach((button) =>
+        button.addEventListener("click", (event) =>
+          new Cart().removeItemFromCart(event)
         )
       );
 
-      document.querySelectorAll(".quantity")
-      .forEach (button =>
-        button.addEventListener('onchange', event =>
-        new Cart().removeItemFromCart(event)
-        )
-      );
-
-      document.querySelector('#close-cart').addEventListener('click', () => this.closeCart());
-      document.querySelector('#continue-shopping').addEventListener('click', () => this.closeCart());
-      this.cartModal.style.display = "block";
+    document
+      .querySelector("#close-cart")
+      .addEventListener("click", () => this.closeCart());
+    document
+      .querySelector("#continue-shopping")
+      .addEventListener("click", () => this.closeCart());
+    this.cartModal.style.display = "block";
   }
 
   closeCart() {
@@ -105,8 +128,7 @@ class Cart {
 }
 
 function getCartItemsHtml(item, count) {
-
-const totalPriceOfOneItem = count * item.price;
+  const totalPriceOfOneItem = count * item.price;
 
   return `
   <div>
@@ -117,9 +139,9 @@ const totalPriceOfOneItem = count * item.price;
       <p class="card-soap-title">${item.name}</p>
   </div>
   <div class="count">
-      <span>&minus;</span>
-      <input type="number" class="quantity" value="${count}">
-      <span>&plus;</span>
+      <span class="substract-item" data-id="${item.id}">&minus;</span>
+      <div class="quantity">${count}</div> 
+      <span class="add-item" data-id="${item.id}">&plus;</span>
   </div>
 </div>
 <div>
@@ -129,7 +151,6 @@ const totalPriceOfOneItem = count * item.price;
   <button class="remove product__remove-item-btn_1Qs"><svg data-id="${item.id}" width="28" height="32" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2H13.6C13.8 2 14 2.2 14 2.4V3.6C14 3.8 13.8 4 13.6 4H0.4C0.2 4 0 3.9 0 3.6V2.4C0 2.2 0.2 2 0.4 2.1H4.1V2L4.9 0.3C5 0.1 5.1 0 5.3 0H8.8C8.9 0 9.1 0.1 9.2 0.2L10 1.9V2ZM1.8 16.1C1.9 17.1 2.8 18 3.8 18H10.1C11.2 18 12 17.2 12.1 16.1L13.1 5H1L1.8 16.1ZM12 6L11.2 16.1C11.2 16.6 10.7 17 10.2 17H3.8C3.3 17 2.8 16.6 2.8 16.1L2 6H12ZM5 8.09998H6V14.1H5V8.09998ZM9 8.09998H8V14.1H9V8.09998Z" fill="#9199AB"></path></svg></button>
 </div>
   `;
-
 }
 
 function updateCartCount() {
@@ -139,41 +160,51 @@ function updateCartCount() {
     if (id === "" || id === "undefined" || allItems[id] < 1) {
       continue;
     }
-    totalCount += allItems[id]; 
+    totalCount += allItems[id];
   }
 
   if (totalCount > 9) {
-    totalCount = "9+"
+    totalCount = "9+";
   }
 
   document.querySelector("#cart-items-count").innerHTML = totalCount;
-
 }
 
-
-function getCartItemsFromStorage () {
-  return JSON.parse(localStorage['cart'] || "{}");
+function renderCartIcon() {
+  let items = getCartItemsFromStorage();
+  for (const id in items) {
+    if (id === "" || id === "undefined" || items[id] < 1) {
+      continue;
+    }
+    document.querySelector("#cart-icon").style.display = "block";
+    return;
+  }
+  document.querySelector("#cart-icon").style.display = "none";
 }
 
-function addItemToCartStorage (id, count) {
+function getCartItemsFromStorage() {
+  return JSON.parse(localStorage["cart"] || "{}");
+}
+
+function addItemToCartStorage(id, count) {
   const cart = getCartItemsFromStorage();
   cart[id] = (cart[id] || 0) + count;
-  localStorage['cart'] = JSON.stringify(cart);
+  localStorage["cart"] = JSON.stringify(cart);
 }
 
-function removeItemFromCartStorage (id) {
+function removeItemFromCartStorage(id) {
   const cart = getCartItemsFromStorage();
   cart[id] = 0;
-  localStorage['cart'] = JSON.stringify(cart);
-} 
+  localStorage["cart"] = JSON.stringify(cart);
+}
 
-function removeOneItemFromCartStorage (id) {
+function removeOneItemFromCartStorage(id) {
   const cart = getCartItemsFromStorage();
   if (cart[id] > 1) {
     cart[id] -= 1;
   } else {
     cart[id] = 0;
   }
-  
-  localStorage['cart'] = JSON.stringify(cart);
+
+  localStorage["cart"] = JSON.stringify(cart);
 }

@@ -1368,6 +1368,10 @@ footer {
     margin-right: 10px;
 }
 
+.add-item, .substract-item {
+    cursor: pointer;
+}
+
 #cart-items button {
     display: contents;
     width: 35px;
@@ -1423,6 +1427,7 @@ textarea {
 }
 
 #cart-icon {
+    display: none;
     position: fixed;
     top: 120px;
     right: 40px;
